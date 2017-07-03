@@ -1,0 +1,358 @@
+@font-face { font-family: Phantom Ultra Light; src: url('fonts/phantom-ultralight.otf');}
+@font-face { font-family: Phantom Light; src: url('fonts/phantom-light.otf');}
+@font-face { font-family: Phantom; src: url('fonts/phantom-regular.otf');}
+
+body {
+	width: 100%;
+  height:100%;
+	background: url("planetdesign.jpg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	color: white;
+	background-color: #000;
+  position: absolute;
+}
+
+.bg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: url("planetdesign.jpg");
+	background-size: contain;
+	background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.navbar {
+	margin: 30px 50px 100px 50px;
+	background-color: #000;
+	border: #000;
+}
+
+.navbar-right {
+	border-bottom: 2px solid #a2a2a2;
+}
+
+.navbar-toggle {
+	margin-top: 8px !important;
+	border: none;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+.navbar-brand {
+	padding: 8px 15px 15px !important;
+	color:white;
+	font-family: phantom, helvetica, sans-serif;
+	text-transform:uppercase;
+	font-size:1.5em;
+}
+
+.projects, .about-me {
+	padding-right: 40px;
+}
+
+.navbar a {
+	font-size: .9em;
+	font-family: Phantom Ultra Light, Helvetica, sans-serif;
+}
+
+.navbar-text {
+	color: #fff !important;
+	margin-left: 0 !important;
+	font-family: Phantom, Helvetica, sans-serif;
+	font-size: 22px;
+	margin-top: 8px !important;
+}
+
+.mobileTaglineWrapper {
+  transform: translateY(25%);
+  margin-left: 50px;
+}
+
+.tagline {
+  margin-bottom: 30px;
+}
+
+.tagline h1 {
+  padding: 0;
+}
+
+.mobileTaglineWrapper .row:nth-child(2) {
+  margin-bottom: 30px;
+}
+
+.row a {
+	font-family: phantom ultra light, helvetica, sans-serif;
+}
+
+.btn-lg {
+	padding: 12px 18px;
+}
+
+.row h1 {
+	font-size: 5em;
+	margin: 0;
+	font-weight: bold;
+	font-family: phantom, helvetica, sans-serif;
+	letter-spacing: -.55px;
+}
+/*Fix kerning of Phantom font on Tagline*/
+.row h1 .char5 {
+	vertical-align: top;
+	margin-left: 0.071em;
+}
+
+.row h1 .char6 {
+	vertical-align: top;
+	margin-left: -0.036em;
+}
+
+.row h1 .char10 {
+	vertical-align: top;
+	margin-left: 0.036em;
+}
+
+.row h1 .char7 {
+	vertical-align: top;
+	margin-left: 0.018em;
+}
+
+.row h1 .char16 {
+	vertical-align: top;
+	margin-left: 0.036em;
+}
+
+.row h1 .char17 {
+	vertical-align: top;
+	margin-left: 0.036em;
+}
+
+.row h1 .char18 {
+	vertical-align: top;
+}
+
+h1 .char19 {
+	vertical-align: top;
+	margin-left: 0.054em;
+}
+
+.row h1 .char20 {
+	vertical-align: top;
+	margin-left: 0.071em;
+}
+
+.row h1 .char22 {
+	vertical-align: top;
+	margin-left: 0.054em;
+}
+
+.row h1 .char21 {
+	vertical-align: top;
+	margin-left: 0.089em;
+}
+.row h1 .char18 {
+	vertical-align: top;
+	margin-left: -0.018em;
+}
+
+.row h1 .char22 {
+	vertical-align: top;
+}
+/*end fix kerning*/
+
+.row p {
+	font-family: phantom light, helvetica, sans-serif;
+	color:#a2a2a2;
+	letter-spacing: 1px;
+}
+
+.hire-me{
+	font-family: phantom ultra light, helvetica, sans-serif;
+	background: none;
+	border:2px solid white;
+	border-radius:0;
+	margin: 0;
+	font-size:.9em;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn-project {
+	background: none;
+	border:2px solid white;
+	border-radius:0;
+	font-size:.9em;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn-project:after, .hire-me:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn-project1, .hire-me1 {
+	border:2px solid #fff;
+	color:#fff;
+}
+.btn-projecte, .hire-mee {
+	overflow: hidden;
+}
+
+.btn-projecte:after, .hire-mee:after {
+	width: 105%;
+	height: 0;
+	top: 50%;
+	left: 50%;
+	background: #fff;
+	opacity: 0;
+	-webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+	-moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+	-ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+	transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+
+.btn-projecte:hover,
+.btn-projecte:active, .hire-mee:hover,
+.hire-mee:active, {
+	color: #000;
+	font-weight: bold;
+}
+
+.btn-projecte:hover:after, .hire-mee:hover:after {
+	height: 180%;
+	opacity: 1;
+}
+
+.glyphicon-menu-right {
+	top: 0.15em;
+	left: 0.7em;
+}
+
+
+footer {
+	margin-right: 50px;
+	margin-top: 75px;
+	position:absolute;
+	right:0;
+	bottom: 20px;
+}
+
+footer ul{
+	float: right;
+	margin: 0;
+}
+
+footer li {
+	display: inline;
+	font-size: .7em;
+	padding:10px;
+}
+
+footer a {
+	color: darkgray;
+	text-decoration: none;
+	font-family: Phantom Ultra Light, Helvetica, Sans-serif;
+}
+
+footer a:hover {
+	color: darkgray;
+	text-decoration: none;
+}
+
+/*Media Query for Ipad and Ipad Pro*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .mobileTaglineWrapper {
+    text-align: center;
+    transform: translateY(100%);
+    margin-left: auto;
+  }
+}
+
+/*@media screen and (min-width: 320px) {
+  .mobileTaglineWrapper {
+    text-align: center;
+
+    margin-left: auto;
+  }
+  .row h1 {
+    font-size: 4em;
+  }*/
+  @media only screen
+  and (min-device-width : 375px)
+  and (max-device-width : 667px) {
+  	.bg {
+  		background-position:-877.5px -25px;
+  		background-size:400%;
+  	}
+  	.navbar {
+  		margin:0 0 20px 0;
+  	}
+  	.navbar-toggle {
+  		margin-right:30px;
+  	}
+  	.navbar-default .navbar-collapse {
+  		border:none;
+  	}
+  	.navbar-right {
+  		border:none;
+  	}
+  	.hireButton {
+  		transform:translateY(50%);
+  	}
+    .mobileTaglineWrapper {
+      margin-left: auto;
+      text-align: center;
+    }
+    .tagline h1 {
+      font-size: 4em;
+    }
+  	footer {
+  		display:none;
+  	}
+  }
+
+  @media only screen
+  and (min-device-width : 300px)
+  and (max-device-width : 374px) {
+    .bg {
+  		background-position:-877.5px -25px;
+  		background-size:400%;
+  	}
+  	.navbar {
+  		margin:0 0 20px 0;
+  	}
+  	.navbar-toggle {
+  		margin-right:30px;
+  	}
+  	.navbar-default .navbar-collapse {
+  		border:none;
+  	}
+  	.navbar-right {
+  		border:none;
+  	}
+  	.hireButton {
+  		transform:translateY(50%);
+  	}
+    .mobileTaglineWrapper {
+      margin-left: auto;
+      text-align: center;
+    }
+    .tagline h1 {
+      font-size: 3em;
+    }
+  	footer {
+  		display:none;
+  	}
+  }
