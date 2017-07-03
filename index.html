@@ -11,11 +11,59 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/css/bootstrapValidator.min.css">
-		<link rel="stylesheet" href="normalize.css">
+		<link rel="stylesheet" href="vendor/normalize.css">
 		<link rel="stylesheet" href="css/main.css">
 	</head>
 	<body>
-    <div class="bg"></div>
+		<!-- Hire Me Modal -->
+		<div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog">
+				<!-- Modal content -->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title" style="font-family:phantom;text-align:center;">design matters!</h4>
+						<p style="font-family:phantom;text-align:center;">create an experience your users will value.</p>
+					</div>
+					<div class="modal-body text-left" style="letter-spacing: 0.08em;">
+						<form role="form" action=" " method="post" id="contact-form" style="font-family:phantom;">
+							<div class="form-group">
+								<label for="name" class="required">name/company</label>
+								<input type="text" class="form-control" name="name" id="name" autofocus required autocomplete="off" style="font-family:Helvetica;">
+							</div>
+							<div class="form-group">
+								<label for="email" class="required">email</label>
+								<input type="text" class="form-control" name="email" id="email" autocomplete="off" required style="font-family:Helvetica;">
+							</div>
+							<div class="form-group">
+								<label for="budget">budget</label>
+								<select name="budget" class="form-control" id="budget" style="font-family:Helvetica;">
+									<option value="0" selected>None selected</option>
+									<option value="1">&lt;1000</option>
+									<option value="2">1000-5000</option>
+									<option value="3">5000-10000</option>
+									<option value="4">&gt;10000</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="requirements" class="required">initial requirements</label>
+								<textarea name="requirements" class="form-control" id="requirements" required style="font-family:helvetica;"></textarea>
+							</div>
+							<div id="fooDiv"><!-- anti-spam div -->
+								<label for="foo">Leave this field blank</label>
+								<input type="text" name="foo" id="foo">
+							</div>
+							<button type="submit" class="btn btn-success btn-block">Go!</button>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<div class="alert alert-success text-center" id="success-message" style="display:none;">
+							<strong>Your message was sent successfully!</strong>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- end modal -->
     <!-- Navigation -->
 		<nav class="navbar navbar-default">
 		  <div class="container-fluid">
@@ -28,7 +76,7 @@
 				<span class="icon-bar"></span>
 			  </button>
 
-			  <a class="navbar-brand" href="#"><img src="img/juniper-logo.png" alt="Logo for Juniper Design"></a>
+			  <a class="navbar-brand" href="#"><img src="assets/img/juniper-logo.png" alt="Logo for Juniper Design"></a>
 			</div>
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav navbar-right">
@@ -78,9 +126,19 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.min.js"></script>
-		<script src="bootstrapValidator.js"></script>
-		<script src="jquery.lettering-0.6.1.min.js"></script>
+		<script src="js/bootstrapValidator.js"></script>
+		<script src="js/jquery.lettering-0.6.1.min.js"></script>
 		<!--<script src="kern.js"></script>--><!--For changing the kerning with the Phantom Font during production-->
+		<script>
+			$("#hire-me").click(function() {
+				$("#myModal").modal();
+			});
+
+			(function () {
+				var e = document.getElementById("fooDiv");
+				e.parentNode.removeChild(e);
+			})();
+		</script>
 		<script>
 	  $(document).ready(function() {
 	    $("h1").lettering();
